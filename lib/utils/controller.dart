@@ -106,7 +106,7 @@ class VideoEditorController extends ChangeNotifier with WidgetsBindingObserver {
   bool get initialized => _video.value.initialized;
 
   ///Get the `VideoPlayerController.value.isPlaying`
-  bool get isPlaying => _video.value.isPlaying;
+  bool get isPlaying => _video?.value?.isPlaying ?? false;
 
   ///Get the `VideoPlayerController.value.position`
   Duration get videoPosition => _video.value.position;

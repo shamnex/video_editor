@@ -49,7 +49,7 @@ class _VideoPickerPageState extends State<VideoPickerPage> {
               color: Colors.black,
               size: 18.0,
             ),
-            ElevatedButton(
+            FlatButton(
               onPressed: _pickVideo,
               child: Text("Pick Video From Gallery"),
             ),
