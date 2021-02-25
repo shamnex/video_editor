@@ -83,8 +83,8 @@ class VideoEditorController extends ChangeNotifier with WidgetsBindingObserver {
   Future<void> dispose() async {
     WidgetsBinding.instance.removeObserver(this);
     if (isPlaying) _video?.pause();
-    _video.removeListener(_videoListener);
-    _video.dispose();
+    _video?.removeListener(_videoListener);
+    _video?.dispose();
     _video = null;
     final executions = await _ffmpeg.listExecutions();
     if (executions.length > 0) await _ffmpeg.cancel();
